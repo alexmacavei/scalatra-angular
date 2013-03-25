@@ -1,0 +1,2 @@
+# Scalatra-Angular base project
+
