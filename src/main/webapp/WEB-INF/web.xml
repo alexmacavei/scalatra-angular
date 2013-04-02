@@ -19,10 +19,10 @@
         <listener-class>org.scalatra.servlet.ScalatraListener</listener-class>
     </listener>
 
-    <!--<error-page>-->
-        <!--<error-code>404</error-code>-->
-        <!--<location>/error404redirectingPage.html</location>-->
-    <!--</error-page>-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404redirectingPage.html</location>
+    </error-page>
 
 
     <servlet-mapping>
@@ -31,5 +31,7 @@
       <url-pattern>/css/*</url-pattern>
       <url-pattern>/js/*</url-pattern>
       <url-pattern>/assets/*</url-pattern>
+      <url-pattern>/app/*</url-pattern>
+      <url-pattern>/partials/*</url-pattern>
     </servlet-mapping>
 </web-app>

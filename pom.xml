@@ -14,6 +14,7 @@
         <logback.version>1.0.9</logback.version>
         <jetty-servlet-api.version>3.0.0.v201112011016</jetty-servlet-api.version>
         <jetty-webapp.version>8.1.8.v20121106</jetty-webapp.version>
+        <scala.version>2.10.0</scala.version>
     </properties>
 
     <build>
@@ -70,14 +71,20 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+            <version>${scala.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.scalatra</groupId>
-            <artifactId>scalatra</artifactId>
+            <artifactId>scalatra_2.10</artifactId>
             <version>${scalatra.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.scalatra</groupId>
-            <artifactId>scalatra-scalate</artifactId>
+            <artifactId>scalatra-scalate_2.10</artifactId>
             <version>${scalatra.version}</version>
         </dependency>
         <dependency>
@@ -85,9 +92,30 @@
             <artifactId>jetty-webapp</artifactId>
             <version>${jetty-webapp.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.json4s</groupId>
+            <artifactId>json4s-jackson_2.10</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scalatra</groupId>
+            <artifactId>scalatra-json_2.10</artifactId>
+            <version>${scalatra.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+
     </dependencies>
 
     <repositories>
+        <repository>
+            <id>SonatypeNexusReleases</id>
+            <name>Sonatype Nexus Releases</name>
+            <url>http://oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
         <repository>
             <id>SonatypeNexusSnapshots</id>
             <name>Sonatype Nexus Snapshots</name>

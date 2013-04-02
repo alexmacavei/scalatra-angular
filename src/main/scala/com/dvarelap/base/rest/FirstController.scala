@@ -1,14 +1,10 @@
 package com.dvarelap.base.rest
 
-import org.scalatra.ScalatraServlet
-import grizzled.slf4j.Logging
-import org.scalatra.scalate.ScalateSupport
+import com.dvarelap.core.rest.JsonControllerSupport
 
-class FirstController extends ScalatraServlet with ScalateSupport with Logging {
+class FirstController extends JsonControllerSupport {
 
     get("/") {
 
-        contentType = "text/html"
-        jade("index")
     }
 }
