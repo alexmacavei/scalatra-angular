@@ -10,7 +10,7 @@ import org.json4s.{DefaultFormats, Formats}
 import javax.servlet.http.HttpServletResponse
 import java.util.Date
 
-class JsonControllerSupport extends ScalatraServlet  with JacksonJsonSupport  with JValueResult with Logging {
+trait JsonControllerSupport extends ScalatraServlet with JacksonJsonSupport with JValueResult with Logging {
 
     protected implicit val jsonFormats: Formats = DefaultFormats
 
