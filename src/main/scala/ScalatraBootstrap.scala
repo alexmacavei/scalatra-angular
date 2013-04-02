@@ -8,7 +8,7 @@ class ScalatraBootstrap extends LifeCycle {
 
 
     override def init(context: ServletContext) {
-        context mount (new FirstController, "/rest/*")
+        context mount (new FirstController, "/rest/first/*")
     }
 
     override def destroy(context: ServletContext) {

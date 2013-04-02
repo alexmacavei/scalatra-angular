@@ -1,9 +1,17 @@
-'use strict';
+"use strict";
 
-/* Services */
+var services = angular.module('myApp.services', ['ngResource']);
 
+services.factory("FirstService", function ($resource) {
+    var self = this;
 
-// Demonstrate how to register services
-// In this case it is a simple value service.
-angular.module('myApp.services', []).
-  value('version', '0.1');
+    self.restResources = $resource("/rest/first/:id", {}, {});
+
+    var firstService = {};
+
+    firstService.getData = function(successFunction) {
+        self.restResources.get({id: 1}, successFunction);
+    };
+
+    return firstService;
+});

@@ -2,10 +2,11 @@ package com.dvarelap.base.rest
 
 import com.dvarelap.core.rest.JsonControllerSupport
 
-class FirstController extends JsonControllerSupport {
-    case class Perro(id: Long = 1, name: String = "Fido")
+case class Data(id: Long = 1, name: String = "Some text")
 
-    get("/") {
-        Perro()
+class FirstController extends JsonControllerSupport {
+
+    get("/:id") {
+        Data()
     }
 }
