@@ -4,11 +4,11 @@ import org.scalatra.LifeCycle
 
 class ScalatraBootstrap extends LifeCycle {
 
-    val PREFIX = "/rest/"
+    val PREFIX = "/rest"
 
 
     override def init(context: ServletContext) {
-        context mount (new FirstController, "/rest/first/*")
+        context mount (new FirstController, PREFIX + "/first/*")
     }
 
     override def destroy(context: ServletContext) {
